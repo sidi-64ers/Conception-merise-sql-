@@ -19,8 +19,8 @@
 
         // ETAPE 1
         // 1. Lister les commandes de la table n°10, les trier par date chronologique (SELECT WHERE ORDER BY)
-        $req = $conn->select("SELECT * from commandes WHERE idTable=10 ORDER BY dateCommande ASC");               
-        $conn->tableIt($req);
+        $req1 = $conn->select("SELECT * from commandes WHERE idTable=10 ORDER BY dateCommande ASC");               
+        $conn->tableIt($req1);
 
         // 2. Liste les commandes de la table n°10 ou n°6 pour le service du midi (AND, OR IN)
        $req2 = $conn->select("SELECT * FROM commandes WHERE idTable IN (6, 10) AND idService=1 ORDER BY dateCommande ASC");
@@ -59,11 +59,10 @@
         
         
         // 2. Lister les noms des employés qui ont pris plus de 5 commandes en 2019
-       // Moyen, moyen ...
+       
 
         // 3. Lister les noms des boissons qui n'ont jamais été commandées
-        // $req13 = $conn->select("SELECT * FROM boissons JOIN commande_boissons ON boissons.idBoisson = commande_boissons.idBoisson");
-        // $conn->tableit($req13);
+        
 
         //   4. Afficher le nom des boisson qui ont été commandées au moins 10 fois
 
@@ -71,11 +70,7 @@
          // 1. Afficher la liste des plats avec comme colonnes : "Plat", "Type" et "Prix" (utilisez des alias)
         
 
-        /*     
-     
-      
-        
-        */
+       
 
 
        
